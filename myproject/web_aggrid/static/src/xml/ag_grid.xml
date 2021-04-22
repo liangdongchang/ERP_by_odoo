@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <t t-name="myproject.ag_grid_client_action">
+        <div class="o_view_manager_content">
+            <div class="ag_grid_content"/>
+        </div>
+    </t>
+</templates>

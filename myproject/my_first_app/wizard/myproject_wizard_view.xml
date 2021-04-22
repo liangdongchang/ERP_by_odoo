@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="wizard_form_view" model="ir.ui.view">
+        <field name="name">myproject.wizard.view.form</field>
+        <field name="model">myproject.wizard</field>
+        <field name="arch" type="xml">
+            <form string="添加参与者">
+                <sheet>
+                    <group>
+                        <field name="session_id"/>
+                        <field name="attendee_ids"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="取消" class="oe_link" special="cancel"/>
+<!--                        type选择object，type  值可以是 workflow, object action   默认是 workflow-->
+<!--                        name是需要定义的方法名-->
+                    <button string="添加"  name="subscribe" type="object" class="oe_highlight" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="myproject_wizard_action_form" model="ir.actions.act_window">
+        <field name="name">添加参与者</field>
+        <field name="res_model">myproject.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <record id="action_wizard" model="ir.actions.act_window">
+        <field name="name">添加参与者</field>
+        <field name="res_model">myproject.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{
+            'default_composition_mode': 'comment',
+            'default_res_id': active_id,
+        }</field>
+        <field name="binding_model_id" ref="my_first_app.model_myproject_session"/>
+        <field name="binding_view_types">form</field>
+    </record>
+</odoo>
+

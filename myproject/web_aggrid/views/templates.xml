@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <template id="web_aggrid" name="web_aggrid assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="myproject/web_aggrid/static/src/js/client_action.js"></script>
+                <link rel="stylesheet" type="text/less" href="/web_aggrid/static/src/less/aggrid_view.less"/>
+                <script type="text/javascript" src="/web_aggrid/static/src/js/view/aggrid_model.js"></script>
+                <script type="text/javascript" src="/web_aggrid/static/src/js/view/aggrid_controller.js"></script>
+                <script type="text/javascript" src="/web_aggrid/static/src/js/view/aggrid_renderer.js"></script>
+                <script type="text/javascript" src="/web_aggrid/static/src/js/view/aggrid_view.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

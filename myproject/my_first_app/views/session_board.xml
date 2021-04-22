@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.actions.act_window" id="act_session_graph">
+        <field name="name">Attendees by course</field>
+        <field name="res_model">myproject.session</field>
+        <field name="view_mode">graph</field>
+        <!--        ref="模型.视图外部ID"-->
+        <field name="view_id" ref="session_graph_view"/>
+    </record>
+    <record model="ir.actions.act_window" id="act_session_calendar">
+        <field name="name">Sessions</field>
+        <field name="res_model">myproject.session</field>
+        <field name="view_mode">calendar</field>
+        <field name="view_id"
+               ref="session_calendar_view"/>
+    </record>
+    <record model="ir.actions.act_window" id="act_course_list">
+        <field name="name">Courses</field>
+        <field name="res_model">myproject.course</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--    定义仪表板form表单-->
+        <record model="ir.ui.view" id="board_session_form">
+            <field name="name">Session Dashboard Form</field>
+            <field name="model">board.board</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Session Dashboard">
+                    <!--                 有好几种样式：1，1-1，2-1和1-1-1，可以在odoo里面点击切换-->
+                    <board style="2-1">
+                        <column>
+                            <!--                        name为视图id-->
+                            <action
+                                    string="Attendees by course"
+                                    name="%(act_session_graph)d"
+                                    height="150"
+                                    width="510"/>
+                            <action
+                                    string="Sessions"
+                                    name="%(act_session_calendar)d"/>
+                        </column>
+                        <column>
+                            <action
+                                    string="Courses"
+                                    name="%(act_course_list)d"/>
+                        </column>
+                    </board>
+                </form>
+            </field>
+        </record>
+<!--        search-->
+        <record model="ir.ui.view" id="session_view_search">
+            <field name="name">session.search</field>
+            <field name="model">myproject.session</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field string="名称" name="name"/>
+
+<!--                    分组-->
+                    <filter string="课程" context="{'group_by':'course_id'}" name="sex"/>
+                </search>
+            </field>
+        </record>
+        <record id="open_board_session" model="ir.actions.act_window">
+                <field name="name">讲座仪表板</field>
+                <field name="res_model">board.board</field>
+                <field name="view_mode">form</field>
+                <field name="view_id" ref="board_session_form"/>
+            </record>
+            <menuitem id="menu_board_session"
+                    name="讲座仪表板"
+                    sequence="1"
+                    parent="base.menu_reporting_dashboard"
+                    action="my_first_app.open_board_session"
+                />
+</odoo>

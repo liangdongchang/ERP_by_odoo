@@ -1,0 +1,14 @@
+<odoo>
+    <data noupdate="1">
+        <record model="myproject.session" id="session0">
+            <field name="name">session 0</field>
+            <field name="start_date">2020-03-25</field>
+            <field name="duration">12.23</field>
+            <field name="seats">12</field>
+        </record>
+
+        <record model="myproject.session" id="session1">
+            <field name="name">session 1</field>
+        </record>
+    </data>
+</odoo>

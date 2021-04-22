@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        tree视图-->
+        <record model="ir.ui.view" id="session_tree_view">
+            <field name="name">session.tree</field>
+            <field name="model">myproject.session</field>
+            <field name="arch" type="xml">
+                <tree string="session Tree" decoration-info="duration&lt;5" decoration-danger="duration&gt;15">
+                    <field name="name"/>
+                    <field name="course_id"/>
+                    <field name="duration"/>
+                    <field name="start_date"/>
+                    <field name="seats"/>
+                    <field name="taken_seats" widget="progressbar"/>
+                </tree>
+            </field>
+        </record>
+<!--        form视图-->
+        <record model="ir.ui.view" id="session_form_view">
+            <field name="name">session.form</field>
+            <field name="model">myproject.session</field>
+            <field name="arch" type="xml">
+                <form string="session Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="course_id"/>
+                            <field name="start_date"/>
+                            <field name="duration"/>
+                            <field name="seats"/>
+                            <field name="taken_seats" widget="progressbar"/>
+                            <field name="instructor_id"/>
+                            <field name="active"/>
+                        </group>
+                        <group string="时间表">
+                            <field name="start_date"/>
+                            <field name="duration"/>
+                            <field name="seats"/>
+                        </group>
+                        <label for="attendee_ids"/>
+                        <field name="attendee_ids"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+<!--        日历视图-->
+        <record model="ir.ui.view" id="session_calendar_view">
+            <field name="name">session.calendar</field>
+            <field name="model">myproject.session</field>
+            <field name="arch" type="xml">
+                <calendar mode="month" string="课程日历"
+                          date_start="start_date"
+                          date_stop="end_date"
+                          color="instructor_id">
+                    <field name="name"/>
+                </calendar>
+            </field>
+        </record>
+<!--        甘特图-->
+        <record model="ir.ui.view" id="session_gantt_view">
+            <field name="name">session.gantt</field>
+            <field name="model">myproject.session</field>
+            <field name="arch" type="xml">
+                <gantt string="Session Gantt"
+                       date_start="start_date"
+                       date_delay="hours"
+                       default_group_by='instructor_id'>
+                </gantt>
+            </field>
+        </record>
+<!--        图表-->
+        <record model="ir.ui.view" id="session_graph_view">
+            <field name="name">session.graph</field>
+            <field name="model">myproject.session</field>
+            <field name="arch" type="xml">
+                <graph string="Session Graph">
+                    <field name="course_id"/>
+                    <field name="attendees_count" type="measure"/>
+                </graph>
+            </field>
+        </record>
+<!--        看板-->
+        <record model="ir.ui.view" id="session_kanban_view">
+            <field name="name">myproject.session.kanban</field>
+            <field name="model">myproject.session</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="course_id">
+                    <field name="color"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_color_{{kanban_getcolor(record.color.raw_value)}}
+                            oe_kanban_global_click_edit oe_semantic_html_override oe_kanban_card
+                            {{record.group_fancy==1 ? 'oe_kanban_card_fancy': ''}}">
+                                <div class="oe_dropdown_kanban">
+                                    <div class="oe_dropdown_toggle">
+                                        <i class="fa fa-bars fa-lg"/>
+                                        <ul class="oe_dropdown_menu">
+                                            <li>
+                                                <a type="delete">Delete</a>
+                                            </li>
+                                            <li>
+                                                <ul class="oe_kanban_colorpicker"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="oe_clear">
+
+                                    </div>
+                                </div>
+                                <div t-attf-class="oe_kanban_content">
+                                    Session name:
+                                    <field name="name"/>
+                                    <br/>
+                                    Start date:
+                                    <field name="start_date"/>
+                                    duration:
+                                    <field name="duration"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+<!--        Session act_window-->
+        <record id="session_list_action" model="ir.actions.act_window">
+            <field name="name">讲座</field>
+            <field name="res_model">myproject.session</field>
+            <field name="view_mode">tree,form,calendar,gantt,graph,pivot,kanban</field>
+            <field name="view_id" ref="session_tree_view"/>
+            <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <menuitem id="myproject_session_menu"
+            name="讲座"
+            sequence="11"
+            parent="myproject_course_app_menu"
+            action="my_first_app.session_list_action"
+        />
+
+    </data>
+</odoo>

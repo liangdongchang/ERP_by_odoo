@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- tag的值就是js文件中core.action_registry.add中的参数 -->
+        <record id="sessionanalysis_action" model="ir.actions.client">
+            <field name="name">讲座分析表</field>
+            <field name="tag">session_analysisaction</field>
+        </record>
+
+        <menuitem name="讲座分析表"
+                  id="menu_session_analysis_action"
+                  parent="my_first_app.myproject_course_app_menu"
+                  action="my_first_app.sessionanalysis_action"
+                  sequence="12"/>
+    </data>
+</odoo>

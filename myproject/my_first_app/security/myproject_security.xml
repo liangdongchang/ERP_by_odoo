@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- 添加模型course到应用category中 -->
+        <record id="module_myproject_course" model="ir.module.category">
+            <field name="name">课程</field>
+        </record>
+        <!-- 添加模型session到应用category中 -->
+        <record id="module_myproject_session" model="ir.module.category">
+            <field name="name">讲座</field>
+        </record>
+        <!-- 创建一个用户组 -->
+        <record id="myproject_group_user" model="res.groups">
+            <field name="name">myproject / User</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <!-- 创建一个管理组 -->
+        <record id="myproject_group_manager" model="res.groups">
+            <field name="name">myproject / Manager</field>
+            <field name="category_id" ref="myproject_group_user"/>
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+
+<!--        记录规则-->
+        <record id="only_responsible_can_modify" model="ir.rule">
+            <field name="name">Only Responsible can modify Course</field>
+            <field name="model_id" search="[('model','=','myproject.course')]" model="ir.model"/>
+            <field name="groups" eval="[(4, ref('my_first_app.myproject_group_manager'))]"/>
+            <field name="perm_read" eval="0"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="0"/>
+            <field name="perm_unlink" eval="1"/>
+            <field name="domain_force">['|', ('responsible_id','=',False), ('responsible_id','=',user.id)]
+            </field>
+        </record>
+    </data>
+</odoo>

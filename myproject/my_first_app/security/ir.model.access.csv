@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_myproject_course_manager,myproject.course,model_myproject_course,my_first_app.myproject_group_manager,1,1,1,1
+access_myproject_course_user,myproject.course,model_myproject_course,my_first_app.myproject_group_user,1,0,0,0
+access_myproject_session_manager,myproject.session,model_myproject_session,my_first_app.myproject_group_manager,1,1,1,1
+access_myproject_session_user,myproject.session,model_myproject_session,my_first_app.myproject_group_user,1,0,0,0
+access_myproject_wizard,access.myproject.wizard,model_myproject_wizard,base.group_user,1,1,1,0

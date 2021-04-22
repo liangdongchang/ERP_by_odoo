@@ -1,0 +1,396 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* my_first_app
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-08 06:17+0000\n"
+"PO-Revision-Date: 2021-04-08 06:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.session_kanban_view
+msgid ""
+"<br/>\n"
+"                                    Start date:"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.course_form_view
+msgid "About"
+msgstr "关于"
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__active
+msgid "Active"
+msgstr "激活"
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__attendees_count
+msgid "Attendees count"
+msgstr "参与总人数"
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__color
+msgid "Color"
+msgstr "颜色"
+
+#. module: my_first_app
+#: model:ir.model,name:my_first_app.model_res_partner
+msgid "Contact"
+msgstr "联系人"
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.course_form_view
+msgid "Course Form"
+msgstr "课程Form"
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.course_tree_view
+msgid "Course Tree"
+msgstr "课程Tree"
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course__create_uid
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__create_uid
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course__create_date
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__create_date
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.session_kanban_view
+msgid "Delete"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course__description
+#: model_terms:ir.ui.view,arch_db:my_first_app.course_form_view
+msgid "Description"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course__display_name
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__display_name
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_wizard__display_name
+#: model:ir.model.fields,field_description:my_first_app.field_res_partner__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__duration
+msgid "Duration"
+msgstr "时长"
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__hours
+msgid "Duration in hours"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course__id
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__id
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_wizard__id
+#: model:ir.model.fields,field_description:my_first_app.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course____last_update
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session____last_update
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_wizard____last_update
+#: model:ir.model.fields,field_description:my_first_app.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "最后更改日"
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course__write_uid
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__write_uid
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course__write_date
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__write_date
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__name
+msgid "Name"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.course_view_search
+msgid "Responsible"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.session_gantt_view
+msgid "Session Gantt"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.session_graph_view
+msgid "Session Graph"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.session_kanban_view
+msgid "Session name:"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.actions.act_window,help:my_first_app.course_list_action
+msgid "Setup a new automated automation"
+msgstr ""
+
+#. module: my_first_app
+#: model:res.partner.category,name:my_first_app.teacher1
+msgid "Teacher / Level 1"
+msgstr ""
+
+#. module: my_first_app
+#: model:res.partner.category,name:my_first_app.teacher2
+msgid "Teacher / Level 2"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.constraint,message:my_first_app.constraint_myproject_course_name_unique
+msgid "The course title must be unique"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.constraint,message:my_first_app.constraint_myproject_course_name_description_check
+msgid "The title of the course should not be the description"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.course_form_view
+msgid "This is an example of notebooks"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.session_kanban_view
+msgid "duration:"
+msgstr ""
+
+#. module: my_first_app
+#: model:res.groups,name:my_first_app.myproject_group_manager
+msgid "myproject / Manager"
+msgstr ""
+
+#. module: my_first_app
+#: model:res.groups,name:my_first_app.myproject_group_user
+msgid "myproject / User"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model,name:my_first_app.model_myproject_course
+msgid "myproject.course"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model,name:my_first_app.model_myproject_session
+msgid "myproject.session"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.session_form_view
+msgid "session Form"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.session_tree_view
+msgid "session Tree"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.course_view_search
+msgid "分组"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__taken_seats
+msgid "参与人数百分比"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__attendee_ids
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_wizard__attendee_ids
+msgid "参与者"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields.selection,name:my_first_app.selection__myproject_course__state__cancel
+#: model_terms:ir.ui.view,arch_db:my_first_app.wizard_form_view
+msgid "取消"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.course_view_search
+#: model_terms:ir.ui.view,arch_db:my_first_app.session_view_search
+msgid "名称"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__seats
+msgid "座位数"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields.selection,name:my_first_app.selection__myproject_course__state__open
+msgid "开启"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__start_date
+msgid "开始时间"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course__sex
+#: model_terms:ir.ui.view,arch_db:my_first_app.course_view_search
+msgid "性别"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.course_view_search
+msgid "我的课程"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,help:my_first_app.field_myproject_session__duration
+msgid "持续时间"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.session_form_view
+msgid "时间表"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_res_partner__is_instructor
+#: model:ir.model.fields,field_description:my_first_app.field_res_users__is_instructor
+msgid "是否为讲师"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.wizard_form_view
+msgid "添加"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.actions.act_window,name:my_first_app.action_wizard
+#: model:ir.actions.act_window,name:my_first_app.myproject_wizard_action_form
+#: model:ir.model,name:my_first_app.model_myproject_wizard
+#: model_terms:ir.ui.view,arch_db:my_first_app.wizard_form_view
+msgid "添加参与者"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields.selection,name:my_first_app.selection__myproject_course__state__full
+msgid "满人"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course__state
+msgid "状态"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__end_date
+msgid "结束时间"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.actions.act_window,name:my_first_app.contact_list_action
+#: model:ir.ui.menu,name:my_first_app.contact_menu
+msgid "联系人"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.actions.act_window,name:my_first_app.contact_cat_list_action
+#: model:ir.ui.menu,name:my_first_app.contact_cat_menu
+msgid "联系人标签"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields.selection,name:my_first_app.selection__myproject_course__state__draft
+msgid "草稿"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__instructor_id
+msgid "讲师"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.actions.act_window,name:my_first_app.session_list_action
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course__session_ids
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_wizard__session_id
+#: model:ir.module.category,name:my_first_app.module_myproject_session
+#: model:ir.ui.menu,name:my_first_app.myproject_session_menu
+msgid "讲座"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.actions.act_window,name:my_first_app.course_list_action
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__course_id
+#: model:ir.module.category,name:my_first_app.module_myproject_course
+#: model:ir.ui.menu,name:my_first_app.myproject_course_menu
+#: model_terms:ir.ui.view,arch_db:my_first_app.partner_is_instructor_form_view
+#: model_terms:ir.ui.view,arch_db:my_first_app.session_view_search
+msgid "课程"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course__name
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_session__course_name
+msgid "课程名称"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.ui.menu,name:my_first_app.myproject_course_app_menu
+msgid "课程应用"
+msgstr ""
+
+#. module: my_first_app
+#: model_terms:ir.ui.view,arch_db:my_first_app.session_calendar_view
+msgid "课程日历"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.ui.menu,name:my_first_app.myproject_course_module_menu
+msgid "课程模块"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,help:my_first_app.field_myproject_course__state
+msgid "课程状态"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.model.fields,field_description:my_first_app.field_myproject_course__responsible_id
+msgid "负责人"
+msgstr ""
+
+#. module: my_first_app
+#: model:ir.ui.menu,name:my_first_app.configuration_menu
+msgid "配置"
+msgstr ""

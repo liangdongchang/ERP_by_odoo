@@ -1,0 +1,105 @@
+/*工具栏*/
+
+.ag_grid_content > .o-toolbar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.ag_grid_content .o-form-inline {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.ag_grid_content .o-form-inline > label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+
+.ag_grid_content .o-form-inline > input {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.ag_grid_content > .ag-div {
+    height: 100%;
+    /*padding-top: 50px;*/
+}
+
+.ag_grid_content .text-cell{
+    text-align: center;
+}
+.ag_grid_content .row-double-clicked{
+    background-color: lightyellow !important;
+}
+
+/*设置列边框*/
+.ag-theme-balham .ag-ltr .ag-cell {
+    border-right: 1px solid #D9DDDD;
+}
+/*设置鼠标所在表格的行背景色*/
+.ag-theme-balham .ag-row-hover {
+    background-color: lightyellow !important;
+}
+
+/*设置鼠标所在表格的列背景色*/
+.ag-theme-balham .ag-column-hover {
+    background-color: lightyellow;
+}
+
+.ag_grid_content .filter-div > label{
+    margin-left: 10px;
+}
+
+.number-cell {
+    text-align: right;
+}
+
+.ag-header-cell-text {
+    text-align: center;
+    width: 100%;
+}
+
+.ag_grid_content {
+    width: 99%;
+}
+
+.ag-theme-balham .ag-ltr .ag-cell {
+    border-right: 1px solid #3333;
+}
+/*设置鼠标所在表格的行背景色*/
+.ag-row-hover {
+    background-color: lightyellow !important;
+}
+/*设置鼠标所在表格的列背景色*/
+.ag-column-hover {
+    background-color: lightyellow;
+}
+
+.ag_grid_content .o-form-inline {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    padding: 5px;
+}
+
+.ag_grid_content .o-form-inline > label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+
+.ag_grid_content .o-form-inline > input {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+.ag_grid_content .o_form_view {
+    display: block;
+    padding: 0
+}
+

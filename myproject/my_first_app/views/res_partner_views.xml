@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="partner_is_instructor_form_view">
+            <field name="name">partner.is_instructor</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="课程">
+                        <group>
+                            <field name="is_instructor"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="contact_list_action">
+            <field name="name">联系人</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="configuration_menu" name="配置"
+                  parent="myproject_course_app_menu"/>
+
+        <menuitem id="contact_menu" name="联系人"
+                  parent="configuration_menu"
+                  action="contact_list_action"/>
+
+        <record model="ir.actions.act_window" id="contact_cat_list_action">
+            <field name="name">联系人标签</field>
+            <field name="res_model">res.partner.category</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="contact_cat_menu" name="联系人标签"
+                  parent="configuration_menu"
+                  action="contact_cat_list_action"/>
+        <record model="res.partner.category" id="teacher1">
+            <field name="name">Teacher / Level 1</field>
+        </record>
+        <record model="res.partner.category" id="teacher2">
+            <field name="name">Teacher / Level 2</field>
+        </record>
+    </data>
+</odoo>

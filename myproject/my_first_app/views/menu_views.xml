@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <menuitem id="myproject_course_app_menu"
+                  name="课程应用" sequence="10" groups="base.group_user"/>
+
+        <menuitem id="myproject_course_module_menu"
+            name="课程模块"
+            sequence="1"
+            parent="myproject_course_app_menu"/>
+
+        <!-- Force empty action, to ease upgrade -->
+        <record id="myproject_course_module_menu" model="ir.ui.menu">
+            <field name="action" eval="False"/>
+        </record>
+    </data>
+</odoo>

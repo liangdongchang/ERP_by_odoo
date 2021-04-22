@@ -1,0 +1,19 @@
+<odoo>
+    <data noupdate="1">
+        <record id="course0" model="myproject.course" >
+            <field name="name">python课程</field>
+            <field name="description">这是一门关于python的课程
+                讲解的是odoo框架的内容
+            </field>
+        </record>
+
+        <record id="course1" model="myproject.course" >
+            <field name="name">英语</field>
+        </record>
+
+        <record id="course2" model="myproject.course" >
+            <field name="name">数学</field>
+            <field name="description">这是一门关于数学的课程</field>
+        </record>
+    </data>
+</odoo>

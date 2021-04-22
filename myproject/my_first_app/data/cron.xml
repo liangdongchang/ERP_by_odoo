@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.cron" id="ir_cron_update_course_member" forcecreate="True">
+            <field name="name">定时更新课程参与人数</field>
+            <field name="active" eval="True" />
+            <field name="user_id" ref="base.user_root"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">minutes</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="True"/>
+            <field name="model_id" ref="my_first_app.model_myproject_course"/>
+            <field name="state">code</field>
+            <field name="code">model.update_course_member()</field>
+        </record>
+    </data>
+</odoo>

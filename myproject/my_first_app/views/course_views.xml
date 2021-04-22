@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+<!--        tree视图-->
+        <record model="ir.ui.view" id="course_tree_view">
+            <field name="name">course.tree</field>
+            <field name="model">myproject.course</field>
+            <field name="arch" type="xml">
+                <tree string="Course Tree">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+<!--        form视图-->
+        <record model="ir.ui.view" id="course_form_view">
+            <field name="name">course.form</field>
+            <field name="model">myproject.course</field>
+            <field name="arch" type="xml">
+                <form string="Course Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                            <field name="responsible_id"/>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                            <page string="About">
+                                This is an example of notebooks
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+<!--        search-->
+        <record model="ir.ui.view" id="course_view_search">
+            <field name="name">course.search</field>
+            <field name="model">myproject.course</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field string="名称" name="name"/>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <filter name="my_courses" string="我的课程" domain="[('responsible_id','=',uid)]"/>
+                    <filter string="男" name="sex_male" domain="[('sex', '=', True)]"/>
+                    <filter string="女" name="sex_female" domain="[('sex', '=', False)]"/>
+<!--                    分组-->
+                    <filter string="性别" context="{'group_by':'sex'}" name="sex"/>
+                    <group string="分组">
+                        <filter name="by_responsible" string="Responsible"
+                                context="{'group':'responsible_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="course_list_action" model="ir.actions.act_window">
+            <field name="name">课程</field>
+            <field name="res_model">myproject.course</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="course_tree_view"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Setup a new automated automation
+                </p>
+            </field>
+            <!--            默认筛选我的课程, 显示按钮-->
+            <field name="context" eval="{'search_default_my_courses': 1, 'test_button': 1}"/>
+            <field name="groups_id" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <menuitem id="myproject_course_menu"
+                  parent="my_first_app.myproject_course_module_menu"
+                  sequence="10" name="课程"
+                  action="my_first_app.course_list_action"/>
+    </data>
+</odoo>

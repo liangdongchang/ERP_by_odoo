@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="session_analysis_assets_backend" name="session_analysis assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/my_first_app/static/src/js/session_analysis.js"></script>
+                <script type="text/javascript" src="/my_first_app/static/src/js/test_button.js"></script>
+            </xpath>
+        </template>
+    </data>
+</odoo>

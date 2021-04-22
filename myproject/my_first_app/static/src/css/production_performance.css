@@ -1,0 +1,85 @@
+/*工具栏*/
+
+.ag_grid_content > .o-toolbar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.ag_grid_content .o-form-inline {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.ag_grid_content .o-form-inline > label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+
+.ag_grid_content .o-form-inline > input {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+/*生产业绩*/
+
+.ag_grid_content > .o-production-performance {
+    height: 100%;
+    padding-top: 50px;
+}
+.ag_grid_content > .production-performance-2{
+    height: 95%;
+    padding-top: 5px;
+}
+.ag_grid_content > .production-performance-3{
+    height: 95%;
+    padding-top: 5px;
+}
+.o-toolbar >.back-btn{
+    margin-left: 5px;
+}
+.o-toolbar .second-date{
+    color: #4A01FF;
+    font-size: 18px;
+    margin-left: 100px;
+}
+.ag_grid_content .text-cell{
+    text-align: center;
+}
+.ag_grid_content .row-double-clicked{
+    background-color: lightyellow !important;
+}
+/*生产业绩分析*/
+
+.ag_grid_content > .o-production-performance-analysis {
+    height: 100%;
+    padding-top: 50px;
+}
+
+/*设置列边框*/
+.ag-theme-balham .ag-ltr .ag-cell {
+    border-right: 1px solid #D9DDDD;
+}
+/*设置鼠标所在表格的行背景色*/
+.ag-theme-balham .ag-row-hover {
+    background-color: lightyellow !important;
+}
+
+/*设置鼠标所在表格的列背景色*/
+.ag-theme-balham .ag-column-hover {
+    background-color: lightyellow;
+}
+
+.ag-details-grid {
+    border: 2px solid #C1C1C1;
+}
+.ag_grid_content .production-performance-div > label{
+    margin-left: 10px;
+}
+
+.number-cell {
+    text-align: right;
+}

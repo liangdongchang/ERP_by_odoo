@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="report_session"
+            model="myproject.session"
+            string="讲座报表"
+            name="my_first_app.report_myproject_report_templates"
+            file="my_first_app.report_myproject_report_templates"
+            report_type="qweb-pdf" />
+</odoo>

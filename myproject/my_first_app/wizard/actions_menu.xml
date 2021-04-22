@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Add action entry in the Action Menu for Leads -->
+    <record id="action_wizard" model="ir.actions.act_window">
+        <field name="name">添加参与者</field>
+        <field name="res_model">myproject.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{
+            'default_composition_mode': 'comment',
+            'default_res_id': active_id,
+        }</field>
+        <field name="binding_model_id" ref="my_first_app.model_myproject_session"/>
+        <field name="binding_view_types">form</field>
+    </record>
+</odoo>

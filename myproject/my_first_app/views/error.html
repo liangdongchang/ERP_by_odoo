@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+	<title>错误</title>
+
+	<style type="text/css">
+		*{padding:0;margin:0;}
+		html{height: 100%;}
+		body{font-size:14px;font-family: 'PingFangSC-Medium';color:#666666;height: 100%;}
+		input,button{border:none;outline:none;color:#000000;font-size:18px;text-align: right;}
+		input::-webkit-input-placeholder{color:#cccccc;font-size: 14px;}
+		#app{width: 100%;min-height: 100vh;background-color: #f3f2f0;overflow: hidden;}
+		.container{width:100%;margin:0 auto; overflow: hidden;}
+		.paycontent .showlist{width: 20rem;background-color: #ffffff;border-radius:10px;border:1px solid #e5e5e5;display: block;margin:0 auto;overflow: hidden;margin-bottom:1rem;}
+		.paycontent .showlist input{text-align: right;width: 300px;}
+		.paycontent .showlist div{height: 6.25rem;line-height: 2rem;margin: auto}
+		.moneybox{border-bottom: 1px solid #e5e5e5;display: flex;align-items: center;color:#000;justify-content: space-between;margin-left: 15px;padding-right: 10px;background-color: #ffffff;}
+		.paycontent .showlist label{color: #000000;}
+		/*#message{font-size:1.5rem;height: 5rem;margin: auto;line-height: 5rem;color: red;}*/
+		#message{font-size:1.4rem;display:flex;text-align: center;margin: auto;color: red;}
+
+	</style>
+</head>
+<body>
+	<div id='app'>
+		<div class="container">
+			<div class="paycontent">
+                <div class='showlist'>
+                    <div class='moneybox'>
+                        <p id="message" >{{message}}</p>
+                    </div>
+                </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
